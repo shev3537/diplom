@@ -1,0 +1,21 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group input {
+    flex: 1;
+  }
+  
+  .preview-section {
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+  }

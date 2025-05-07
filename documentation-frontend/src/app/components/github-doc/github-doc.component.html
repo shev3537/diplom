@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Generate Documentation from GitHub</h2>
+    
+    <div class="input-group">
+      <input 
+        type="text" 
+        [(ngModel)]="githubUrl" 
+        placeholder="Enter GitHub repository URL (e.g., https://github.com/owner/repo)"
+        class="form-control"
+      >
+      <button (click)="generateDocumentation()" [disabled]="isLoading" class="btn btn-primary">
+        {{ isLoading ? 'Generating...' : 'Generate PDF' }}
+      </button>
+    </div>
+  
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  
+    <div *ngIf="pdfPreviewUrl" class="preview-section">
+      <h3>Preview</h3>
+      <iframe [src]="pdfPreviewUrl" width="100%" height="500px"></iframe>
+      <button (click)="downloadPdf()" class="btn btn-success">Download PDF</button>
+    </div>
+  </div>

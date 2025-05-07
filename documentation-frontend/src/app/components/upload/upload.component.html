@@ -1,0 +1,51 @@
+<div>
+  <input type="text" [(ngModel)]="repoUrl" placeholder="Вставьте ссылку на GitHub" />
+  <button (click)="onUpload()" [disabled]="!repoUrl || loading">Загрузить</button>
+  <div *ngIf="loading">Загрузка...</div>
+  <div *ngIf="error">{{ error }}</div>
+
+  <ng-container *ngIf="docs">
+    <div class="readme-block" *ngIf="docs.readme">
+      <h3>Документация (README.md)</h3>
+      <div [innerHTML]="docs.readme.content"></div>
+    </div>
+
+    <div class="readme-block" *ngIf="docs.commits">
+      <h3>Последние коммиты</h3>
+      <ul>
+        <li *ngFor="let commit of docs.commits">
+          <b>{{commit.date}}</b> - {{commit.author}}: {{commit.message}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="readme-block" *ngIf="docs.files">
+      <h3>Документация по коду</h3>
+      <div *ngFor="let file of docs.files">
+        <h4>Файл: {{file.name}}</h4>
+        <div *ngIf="file.module_docstring">
+          <b>Docstring файла:</b>
+          <pre>{{file.module_docstring}}</pre>
+        </div>
+        <div *ngIf="file.classes.length">
+          <b>Классы:</b>
+          <ul>
+            <li *ngFor="let cls of file.classes">
+              <b>{{cls.name}}</b>
+              <pre>{{cls.docstring}}</pre>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="file.functions.length">
+          <b>Функции:</b>
+          <ul>
+            <li *ngFor="let fn of file.functions">
+              <b>{{fn.name}}</b>
+              <pre>{{fn.docstring}}</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

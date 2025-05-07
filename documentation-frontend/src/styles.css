@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background-image: url('./top-view-different-paper-sheets.jpg'); /* Укажите путь к вашей картинке */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Фиксируем фон */
+    margin: 0; /* Удаляем отступы */
+    padding: 0; /* Удаляем отступы */
+    font-family: Arial, sans-serif; /* Установите шрифт */
+  }
+
+  .readme-block {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    max-width: 900px;
+    margin: 2rem auto;
+    opacity: 0.97;
+  }
+  .readme-block h1, .readme-block h2, .readme-block h3, .readme-block h4 {
+    color: #234;
+    font-weight: bold;
+  }
+  .readme-block pre, .readme-block code {
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    overflow-x: auto;
+  }
+  

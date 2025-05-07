@@ -1,0 +1,67 @@
+<div class="main-container">
+  <app-header></app-header>
+
+  <!-- Блок 1: Заголовок и генерация документа -->
+  <div class="hero-block">
+    <h1 class="title">ГЕНЕРАЦИЯ ДОКУМЕНТАЦИИ 5G</h1>
+    <h2>Облегчи себе жизнь</h2>
+    <div class="buttons">
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden #fileInput>
+      <button mat-raised-button color="primary" (click)="fileInput.click()">выбрать файл</button>
+      <button mat-raised-button color="accent" (click)="onUpload()">загрузить</button>
+      <button mat-raised-button color="warn" [disabled]="!downloadUrl" (click)="downloadFile()">
+        скачать
+      </button>
+    </div>
+  </div>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+
+<!-- Можно добавить другие компоненты для API, code-docs и т.д. -->
+
+  <!-- Блок 2: Инструкция -->
+  <div class="instruction-block">
+    <h2>Инструкция по использованию приложения:</h2>
+    <div class="instruction-card">
+      <h3>Шаг 1: Выберите файл</h3>
+      <p>Выберите файл для загрузки.</p>
+    </div>
+    <div class="instruction-card">
+      <h3>Шаг 2: Загрузите файл</h3>
+      <p>Нажмите кнопку "Загрузить" для начала процесса генерации документации.</p>
+    </div>
+    <div class="instruction-card">
+      <h3>Шаг 3: Скачайте документацию</h3>
+      <p>После завершения процесса нажмите кнопку "Скачать файл" для получения готовой документации.</p>
+    </div>
+  </div>
+
+  <!-- Блок 3: Преимущества -->
+  <div class="advantages-block">
+    <h2>Преимущества использования нашего приложения:</h2>
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <h3>Автоматическая генерация</h3>
+        <p>Экономия времени и усилий.</p>
+      </div>
+      <div class="advantage-card">
+        <h3>Простота использования</h3>
+        <p>Интуитивно понятный интерфейс.</p>
+      </div>
+      <div class="advantage-card">
+        <h3>Высокое качество</h3>
+        <p>Генерируемая документация высокого качества.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Блок 4: Контакты -->
+  <div class="contacts-block">
+    <h2>Свяжитесь с нами:</h2>
+    <p>Если у вас возникли вопросы или проблемы, вы можете связаться с нами по:</p>
+    <ul>
+      <li>Электронная почта: </li>
+      <li>Телефон: +7 123 456 78 90</li>
+    </ul>
+  </div>
+</div>
