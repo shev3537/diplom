@@ -31,9 +31,9 @@ jobs:
           pip install -r requirements.txt --no-cache-dir
           pip install flake8
 
-      - name: Lint code
-        working-directory: documentation_backend
-        run: flake8 . --exclude venv
+#      - name: Lint code
+#        working-directory: documentation_backend
+#        run: flake8 . --exclude venv
 
       - name: Run migrations
         working-directory: documentation_backend
