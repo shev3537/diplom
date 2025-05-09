@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "documentation_backend/**"
+  workflow_dispatch:
 
 jobs:
   test:
