@@ -1,0 +1,36 @@
+<div class="my-docs-container">
+  <h2>Мои документы</h2>
+  <p class="my-docs-description">
+    Здесь отображаются все ваши сгенерированные документы. Вы можете просматривать, скачивать и управлять результатами генерации документации для ваших проектов. Каждый документ содержит PDF и HTML-версию, если генерация прошла успешно.
+  </p>
+  <div class="my-docs-extra">
+    <b>Совет:</b> Для быстрого поиска используйте сочетание клавиш <kbd>Ctrl+F</kbd> или воспользуйтесь сортировкой по столбцам таблицы.
+  </div>
+  <hr style="margin: 2rem 0; border: none; border-top: 1.5px solid #e0e7ef;">
+  <div class="my-docs-extra">
+    <b>Подсказка:</b> Для скачивания документации в PDF или HTML формате используйте соответствующие кнопки в столбце "Действия".
+  </div>
+  <button (click)="loadDocuments()" [disabled]="loading">Обновить</button>
+  <div *ngIf="loading">Загрузка...</div>
+  <div *ngIf="error" class="text-danger">{{ error }}</div>
+  <table *ngIf="documents.length" class="docs-table">
+    <tr>
+      <th>Название</th>
+      <th>Дата</th>
+      <th>Статус</th>
+      <th>Действия</th>
+    </tr>
+    <tr *ngFor="let doc of documents">
+      <td>{{ doc.title }}</td>
+      <td>{{ doc.created_at | date:'dd.MM.yyyy HH:mm' }}</td>
+      <td>{{ getStatusText(doc.status) }}</td>
+      <td>
+        <a *ngIf="doc.pdf_url" [href]="doc.pdf_url" target="_blank" class="doc-btn pdf">PDF</a>
+        <a *ngIf="doc.html_path" [href]="'http://localhost:8000/' + doc.html_path" target="_blank" class="doc-btn html">HTML</a>
+        <button (click)="viewHtml(doc)" *ngIf="doc.html_path" class="doc-btn view">Просмотр</button>
+        <button (click)="deleteDocument(doc)" class="doc-btn delete">Удалить</button>
+      </td>
+    </tr>
+  </table>
+  <div *ngIf="!documents.length && !loading" class="text-muted">Документов пока нет.</div>
+</div> 

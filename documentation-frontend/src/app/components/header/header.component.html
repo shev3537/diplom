@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="container header-container">
+    <div class="logo">
+      <a routerLink="/home">
+        <span class="logo-text">DocHub</span>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-home"></i>
+            Главная
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/my-docs" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-folder-open"></i>
+            Мои документы
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/upload" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-upload"></i>
+            Сгенерировать документацию
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <a routerLink="/register" class="nav-link">Регистрация</a>
+      <button class="logout-btn" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+        Выйти
+      </button>
+    </div>
+  </div>
+</header>
+  

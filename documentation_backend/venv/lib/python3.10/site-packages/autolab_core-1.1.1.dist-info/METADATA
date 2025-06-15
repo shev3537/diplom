@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: autolab-core
+Version: 1.1.1
+Summary: Core utilities for the Berkeley AutoLab
+Home-page: https://github.com/BerkeleyAutomation/autolab_core
+Author: Jeff Mahler
+Author-email: jmahler@berkeley.edu
+Maintainer: Mike Danielczuk
+Maintainer-email: mdanielczuk@berkeley.edu
+License: Apache Software License
+Keywords: robotics grasping transformations
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: ruamel.yaml
+Requires-Dist: matplotlib
+Requires-Dist: multiprocess
+Requires-Dist: setproctitle
+Requires-Dist: opencv-python
+Requires-Dist: Pillow
+Requires-Dist: joblib
+Requires-Dist: colorlog
+Requires-Dist: pyreadline ; platform_system == "Windows"
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-napoleon ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: ros
+Requires-Dist: rospkg ; extra == 'ros'
+Requires-Dist: catkin-pkg ; extra == 'ros'
+Requires-Dist: empy ; extra == 'ros'
+
+Core utilities for the Berkeley AutoLab. Includes rigid transformations, loggers, and 3D data wrappers.
+

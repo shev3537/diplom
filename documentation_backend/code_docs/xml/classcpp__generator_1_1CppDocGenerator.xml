@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classcpp__generator_1_1CppDocGenerator" kind="class" language="Python" prot="public">
+    <compoundname>cpp_generator::CppDocGenerator</compoundname>
+    <basecompoundref refid="classbase_1_1DocGenerator" prot="public" virt="non-virtual">base.DocGenerator</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcpp__generator_1_1CppDocGenerator_1ae8d92407d705d09c06afc02eed8c7f45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str cpp_generator.CppDocGenerator.generate</definition>
+        <argsstring>(self, str repo_path, str repo_name)</argsstring>
+        <name>generate</name>
+        <qualifiedname>cpp_generator.CppDocGenerator.generate</qualifiedname>
+        <reimplements refid="classbase_1_1DocGenerator_1ae224a7b942a19b9cdff1fa9e528201dd">generate</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>repo_path</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>repo_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Генерирует документацию для проекта в repo_path.
+Возвращает путь к сгенерированной документации.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/cpp_generator.py" line="51" column="1" bodyfile="api/doc_generators/cpp_generator.py" bodystart="51" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ABC</label>
+      </node>
+      <node id="2">
+        <label>base.DocGenerator</label>
+        <link refid="classbase_1_1DocGenerator"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>cpp_generator.CppDocGenerator</label>
+        <link refid="classcpp__generator_1_1CppDocGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ABC</label>
+      </node>
+      <node id="2">
+        <label>base.DocGenerator</label>
+        <link refid="classbase_1_1DocGenerator"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>cpp_generator.CppDocGenerator</label>
+        <link refid="classcpp__generator_1_1CppDocGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="api/doc_generators/cpp_generator.py" line="50" column="1" bodyfile="api/doc_generators/cpp_generator.py" bodystart="50" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classcpp__generator_1_1CppDocGenerator_1ae8d92407d705d09c06afc02eed8c7f45" prot="public" virt="non-virtual"><scope>cpp_generator::CppDocGenerator</scope><name>generate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

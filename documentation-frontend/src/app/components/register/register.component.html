@@ -1,0 +1,11 @@
+<div class="register-container">
+  <h2>Регистрация</h2>
+  <form (ngSubmit)="register()" #regForm="ngForm" class="register-form">
+    <input [(ngModel)]="username" name="username" placeholder="Логин" required />
+    <input [(ngModel)]="email" name="email" placeholder="Email" required />
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Пароль" required />
+    <button type="submit" [disabled]="!regForm.form.valid">Зарегистрироваться</button>
+  </form>
+  <div *ngIf="error" class="text-danger">{{ error }}</div>
+  <div *ngIf="success" class="text-success">Регистрация успешна! Теперь вы можете войти.</div>
+</div> 

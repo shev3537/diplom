@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacejs__generator" kind="namespace" language="Python">
+    <compoundname>js_generator</compoundname>
+    <innerclass refid="classjs__generator_1_1JsDocGenerator" prot="public">js_generator::JsDocGenerator</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="js__generator_8py_1a094a6ee25464f7b9f7979217a4566492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>js_generator.find_js_source_dirs</definition>
+        <argsstring>(repo_path)</argsstring>
+        <name>find_js_source_dirs</name>
+        <qualifiedname>js_generator.find_js_source_dirs</qualifiedname>
+        <param>
+          <type>repo_path</type>
+          <defname>repo_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/js_generator.py" line="7" column="1" bodyfile="api/doc_generators/js_generator.py" bodystart="7" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="js__generator_8py_1a0ba29707c3b2b5eff598802d3ebcf57a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>js_generator.create_jsdoc_config</definition>
+        <argsstring>(str repo_path, source_dirs=None, exclude_dirs=None, output_dir=&apos;jsdoc_output&apos;)</argsstring>
+        <name>create_jsdoc_config</name>
+        <qualifiedname>js_generator.create_jsdoc_config</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>repo_path</declname>
+        </param>
+        <param>
+          <type>source_dirs</type>
+          <defname>source_dirs</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>exclude_dirs</type>
+          <defname>exclude_dirs</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>output_dir</type>
+          <defname>output_dir</defname>
+          <defval>&apos;jsdoc_output&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/js_generator.py" line="15" column="1" bodyfile="api/doc_generators/js_generator.py" bodystart="15" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="api/doc_generators/js_generator.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

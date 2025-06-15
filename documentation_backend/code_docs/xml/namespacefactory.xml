@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacefactory" kind="namespace" language="Python">
+    <compoundname>factory</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="factory_8py_1a799b970f6aa8f0bd4409d69dcd2f8ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>factory.get_generator</definition>
+        <argsstring>(str repo_path)</argsstring>
+        <name>get_generator</name>
+        <qualifiedname>factory.get_generator</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>repo_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/factory.py" line="6" column="1" bodyfile="api/doc_generators/factory.py" bodystart="6" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="api/doc_generators/factory.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

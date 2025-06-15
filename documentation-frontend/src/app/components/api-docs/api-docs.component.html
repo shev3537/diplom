@@ -1,0 +1,19 @@
+<div *ngFor="let endpoint of endpoints" class="mb-6 p-4 border rounded-lg">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="px-3 py-1 rounded-full {{getMethodColor(endpoint.method)}}">
+        {{endpoint.method}}
+      </span>
+      <code class="text-lg">{{endpoint.path}}</code>
+    </div>
+    <p class="mb-3">{{endpoint.description}}</p>
+    
+    <div *ngIf="endpoint.params.length" class="mt-3">
+      <h4 class="font-medium mb-2">Параметры:</h4>
+      <div class="grid grid-cols-3 gap-2">
+        <div *ngFor="let param of endpoint.params" class="p-2 bg-gray-50 rounded">
+          <strong>{{param.name}}</strong>: {{param.type}}
+          <span *ngIf="!param.required" class="text-gray-500">(опционально)</span>
+        </div>
+      </div>
+    </div>
+  </div>

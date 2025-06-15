@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classbase_1_1_doc_generator" kind="class" language="Python" prot="public">
+    <compoundname>base::DocGenerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ABC</basecompoundref>
+    <derivedcompoundref refid="classcpp__generator_1_1_cpp_doc_generator" prot="public" virt="non-virtual">cpp_generator.CppDocGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classjs__generator_1_1_js_doc_generator" prot="public" virt="non-virtual">js_generator.JsDocGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classpython__generator_1_1_python_doc_generator" prot="public" virt="non-virtual">python_generator.PythonDocGenerator</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbase_1_1_doc_generator_1ae224a7b942a19b9cdff1fa9e528201dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str base.DocGenerator.generate</definition>
+        <argsstring>(self, str repo_path)</argsstring>
+        <name>generate</name>
+        <qualifiedname>base.DocGenerator.generate</qualifiedname>
+        <reimplementedby refid="classcpp__generator_1_1_cpp_doc_generator_1a167fcb6ca2c45787c4d275b409b05e71">generate</reimplementedby>
+        <reimplementedby refid="classjs__generator_1_1_js_doc_generator_1a3cb150b919f92407cfba9d8aced073f5">generate</reimplementedby>
+        <reimplementedby refid="classpython__generator_1_1_python_doc_generator_1af5ec70e55ed852f54a5b774b2407f3a4">generate</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>repo_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Генерирует документацию для проекта в repo_path.
+Возвращает путь к сгенерированной документации.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/base.py" line="6" column="1" bodyfile="api/doc_generators/base.py" bodystart="6" bodyend="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ABC</label>
+      </node>
+      <node id="1">
+        <label>base.DocGenerator</label>
+        <link refid="classbase_1_1_doc_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cpp_generator.CppDocGenerator</label>
+        <link refid="classcpp__generator_1_1_cpp_doc_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>js_generator.JsDocGenerator</label>
+        <link refid="classjs__generator_1_1_js_doc_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>python_generator.PythonDocGenerator</label>
+        <link refid="classpython__generator_1_1_python_doc_generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ABC</label>
+      </node>
+      <node id="1">
+        <label>base.DocGenerator</label>
+        <link refid="classbase_1_1_doc_generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="api/doc_generators/base.py" line="4" column="1" bodyfile="api/doc_generators/base.py" bodystart="4" bodyend="12"/>
+    <listofallmembers>
+      <member refid="classbase_1_1_doc_generator_1ae224a7b942a19b9cdff1fa9e528201dd" prot="public" virt="non-virtual"><scope>base::DocGenerator</scope><name>generate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

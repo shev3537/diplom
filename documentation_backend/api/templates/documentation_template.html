@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Документация</title>
+  <link rel="stylesheet" href="{{ css_path }}">
+</head>
+<body>
+  <div class="doc-container">
+    {{ content|safe }}
+  </div>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Документация проекта</title>
+    <link rel="stylesheet" href="{{ css_path }}">
+    <style>
+        @page {
+            margin: 32mm 20mm 32mm 20mm; /* сверху/снизу 32мм, по бокам 20мм */
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            word-wrap: break-word;
+            background: #fff;
+        }
+        h1, h2, h3 {
+            color: #2a7ae2;
+            page-break-after: avoid;
+        }
+        .title-page {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+        .logo-block {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .logo-block img {
+            max-width: 220px;
+            max-height: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2.6em;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            color: #444;
+            margin-bottom: 1.2em;
+        }
+        .description {
+            font-size: 1.15em;
+            color: #555;
+            margin-bottom: 2.5em;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gen-date {
+            margin-top: 40px;
+            color: #888;
+            font-size: 1em;
+        }
+        .toc {
+            margin: 40px 0 50px 0;
+            page-break-after: always;
+        }
+        .toc-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.08em;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .toc-list li {
+            margin-bottom: 10px;
+        }
+        .toc-list a {
+            color: #2a7ae2;
+            text-decoration: none;
+            border-bottom: 1px dotted #2a7ae2;
+        }
+        .toc-list a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .tree {
+           background: #f8f8f8;
+            border-left: 4px solid #2a7ae2;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+            overflow-wrap: break-word; 
+        }
+        .readme {
+            background: #f8f8f8;
+            border-left: 4px solid #2a7ae2;
+            padding: 18px 22px;
+            margin-bottom: 28px;
+            overflow-wrap: break-word;
+        }
+        .file-block {
+            margin-bottom: 22px;
+            padding: 14px 20px;
+            background: #f4f7fa;
+            border-radius: 7px;
+            border: 1px solid #e0e0e0;
+            overflow-wrap: break-word;
+        }
+        .docstring {
+            font-style: italic;
+            color: #444;
+            margin-bottom: 8px;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
+        .commit-list {
+            font-size: 0.98em;
+            background: #f6f6f6;
+            border-radius: 5px;
+            padding: 10px 18px;
+            overflow-wrap: break-word;
+        }
+        .commit {
+            margin-bottom: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            word-break: break-word;
+        }
+        th {
+            background: #e8e8e8;
+        }
+        a {
+            color: #2a7ae2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        ul, ol {
+            margin-left: 22px;
+        }
+        pre, code {
+            font-family: 'Fira Mono', 'Courier New', Courier, monospace;
+            font-size: 0.97em;
+            background: #f2f2f2;
+            padding: 3px 6px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- ТИТУЛЬНИК -->
+     <div class="doc-container">
+    <div class="title-page">
+        <div class="logo-block">
+            <!-- Замените src на свой логотип, если нужно -->
+            <!-- <img src="https://your-site.com/logo.png" alt="Логотип проекта"> -->
+        </div>
+        <div class="title">Документация проекта</div>
+        <div class="subtitle">{{ docs.project_name|default:"Без названия" }}</div>
+        <div class="description">
+            {% if docs.readme %}
+                {{ docs.readme.content|truncatewords_html:40|safe }}
+            {% else %}
+                Автоматически сгенерированная документация по исходному коду и истории репозитория.
+            {% endif %}
+        </div>
+        <div class="gen-date">Дата генерации: {{ now|date:"d.m.Y H:i" }}</div>
+    </div>
+    </div>
+    <div class="page-break"></div>
+
+    <!-- ОГЛАВЛЕНИЕ -->
+    <div class="toc">
+        <div class="toc-title">Оглавление</div>
+        <ul class="toc-list">
+            <li><a href="#tree">Древо проекта</a></li>
+            <li><a href="#readme">Введение</a></li>
+            <li><a href="#files">Исходные файлы</a></li>
+            <li><a href="#commits">Последние коммиты</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="tree">
+        <h2>Древо проекта</h2>
+        <pre style="background:#f9f9f9; padding:16px; border-radius:6px; border:1px solid #e0e0e0; font-size:1em; max-width:900px; overflow-x:auto;">
+    {% for path in docs.project_tree %}
+    {{ path }}
+    {% endfor %}
+        </pre>
+    </div>
+
+    
+    <!-- README -->
+    <div class="section" id="readme">
+        <h2>Введение</h2>
+        <div class="readme">
+            {{ docs.readme.content|safe }}
+        </div>
+    </div>
+
+    <!-- Исходные файлы -->
+    <div class="section" id="files">
+        <h2>Исходные файлы</h2>
+        {% for file in docs.files %}
+        <div class="file-block">
+            <h3 id="file-{{ forloop.counter }}">{{ file.name }}</h3>
+            {% if file.module_docstring %}
+                <div class="docstring"><strong>Модуль:</strong> {{ file.module_docstring }}</div>
+            {% endif %}
+            {% if file.classes %}
+                <strong>Классы:</strong>
+                <ul>
+                {% for cls in file.classes %}
+                    <li>
+                        <b>{{ cls.name }}</b>
+                        {% if cls.docstring %}<div class="docstring">{{ cls.docstring }}</div>{% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% if file.functions %}
+                <strong>Функции:</strong>
+                <ul>
+                {% for func in file.functions %}
+                    <li>
+                        <b>{{ func.name }}</b>
+                        {% if func.docstring %}<div class="docstring">{{ func.docstring }}</div>{% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% if file.api_endpoints %}
+                <strong>API Endpoints:</strong>
+                <table>
+                    <tr>
+                        <th>Function</th>
+                        <th>Decorator</th>
+                        <th>Path</th>
+                    </tr>
+                    {% for api in file.api_endpoints %}
+                    <tr>
+                        <td>{{ api.function }}</td>
+                        <td>{{ api.decorator }}</td>
+                        <td>{{ api.path }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Коммиты -->
+    <div class="section" id="commits">
+        <h2>Последние коммиты</h2>
+        <div class="commit-list">
+            {% for commit in docs.commits %}
+            <div class="commit">
+                <b>{{ commit.date }}</b> - <i>{{ commit.author }}</i><br>
+                <span>{{ commit.message }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

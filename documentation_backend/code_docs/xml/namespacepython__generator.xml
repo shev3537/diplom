@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespacepython__generator" kind="namespace" language="Python">
+    <compoundname>python_generator</compoundname>
+    <innerclass refid="classpython__generator_1_1PythonDocGenerator" prot="public">python_generator::PythonDocGenerator</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="python__generator_8py_1aaa826aac5375447d4c00e068a09cccf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>python_generator.remove_readonly</definition>
+        <argsstring>(func, path, excinfo)</argsstring>
+        <name>remove_readonly</name>
+        <qualifiedname>python_generator.remove_readonly</qualifiedname>
+        <param>
+          <type>func</type>
+          <defname>func</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <param>
+          <type>excinfo</type>
+          <defname>excinfo</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/python_generator.py" line="7" column="1" bodyfile="api/doc_generators/python_generator.py" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="python__generator_8py_1a433ced078c6f5a5aa7161f585dbfa599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>python_generator.add_init_files</definition>
+        <argsstring>(root_dir)</argsstring>
+        <name>add_init_files</name>
+        <qualifiedname>python_generator.add_init_files</qualifiedname>
+        <param>
+          <type>root_dir</type>
+          <defname>root_dir</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/python_generator.py" line="12" column="1" bodyfile="api/doc_generators/python_generator.py" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="python__generator_8py_1ac423243807b2dfdf938c730935754c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>python_generator.find_main_package</definition>
+        <argsstring>(repo_path)</argsstring>
+        <name>find_main_package</name>
+        <qualifiedname>python_generator.find_main_package</qualifiedname>
+        <param>
+          <type>repo_path</type>
+          <defname>repo_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="api/doc_generators/python_generator.py" line="19" column="1" bodyfile="api/doc_generators/python_generator.py" bodystart="19" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="api/doc_generators/python_generator.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

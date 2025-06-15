@@ -1,0 +1,65 @@
+<div class="upload-container">
+  <div class="upload-main-card">
+    <h2>Сгенерировать документацию</h2>
+    <div class="instruction-block card">
+      <h3>Как сгенерировать документацию?</h3>
+      <div class="instruction-section">
+        <div class="instruction-step">
+          <b>1. Укажите ссылку на репозиторий</b>
+          <div class="step-desc">Поддерживаются GitHub, GitLab, Bitbucket и другие публичные репозитории.</div>
+        </div>
+        <div class="instruction-step">
+          <b>2. Нажмите кнопку <span style="color: var(--primary-color)">Сгенерировать документацию</span></b>
+          <div class="step-desc">Запустится процесс генерации документации.</div>
+        </div>
+        <div class="instruction-step">
+          <b>3. Дождитесь завершения генерации</b>
+          <div class="step-desc">Статус процесса появится ниже.</div>
+        </div>
+        <div class="instruction-step">
+          <b>4. Получите результат</b>
+          <div class="step-desc">Скачайте PDF или откройте HTML-документацию после завершения.</div>
+        </div>
+      </div>
+      <div class="instruction-note">
+        Поддерживаются только публичные репозитории. Для приватных — обратитесь к администратору.
+      </div>
+    </div>
+    <form class="upload-form">
+      <input type="text" [(ngModel)]="genRepoUrl" name="genRepoUrl" placeholder="Ссылка для генерации документации" />
+      <button (click)="generateDoc()" [disabled]="!genRepoUrl || genLoading">Сгенерировать документацию</button>
+    </form>
+    <div *ngIf="genLoading" class="generation-anim">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      Генерация...
+    </div>
+    <div *ngIf="genError" class="text-danger">{{ genError }}</div>
+    <div *ngIf="genSuccess" class="text-success">Документация поставлена в очередь!</div>
+    <div *ngIf="genResult">
+      <a *ngIf="genResult.pdf_url" [href]="'http://localhost:8000' + genResult.pdf_url" target="_blank" class="doc-link pdf-link">Открыть PDF документацию</a>
+      <a *ngIf="genResult.doc_url" [href]="'http://localhost:8000' + genResult.doc_url" target="_blank" class="doc-link html-link">Открыть HTML документацию</a>
+    </div>
+    <style>
+      .doc-link {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .pdf-link {
+        background-color: #e74c3c;
+        color: white;
+      }
+      .html-link {
+        background-color: #3498db;
+        color: white;
+      }
+      .doc-link:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </div>
+</div>

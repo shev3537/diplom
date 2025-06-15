@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="classcpp__generator_1_1CppDocGenerator" kind="class"><name>cpp_generator::CppDocGenerator</name>
+    <member refid="classcpp__generator_1_1CppDocGenerator_1ae8d92407d705d09c06afc02eed8c7f45" kind="function"><name>generate</name></member>
+  </compound>
+  <compound refid="classbase_1_1DocGenerator" kind="class"><name>base::DocGenerator</name>
+    <member refid="classbase_1_1DocGenerator_1ae224a7b942a19b9cdff1fa9e528201dd" kind="function"><name>generate</name></member>
+  </compound>
+  <compound refid="classjs__generator_1_1JsDocGenerator" kind="class"><name>js_generator::JsDocGenerator</name>
+    <member refid="classjs__generator_1_1JsDocGenerator_1a3cb150b919f92407cfba9d8aced073f5" kind="function"><name>generate</name></member>
+  </compound>
+  <compound refid="classpython__generator_1_1PythonDocGenerator" kind="class"><name>python_generator::PythonDocGenerator</name>
+    <member refid="classpython__generator_1_1PythonDocGenerator_1af5ec70e55ed852f54a5b774b2407f3a4" kind="function"><name>generate</name></member>
+  </compound>
+  <compound refid="namespacebase" kind="namespace"><name>base</name>
+  </compound>
+  <compound refid="namespacecpp__generator" kind="namespace"><name>cpp_generator</name>
+    <member refid="cpp__generator_8py_1abb88e3406d4fe5fa68648e7e598b7284" kind="function"><name>find_code_dirs</name></member>
+    <member refid="cpp__generator_8py_1a73ed676f354e38c53fe2a9a64bcc4173" kind="function"><name>create_doxygen_config</name></member>
+  </compound>
+  <compound refid="namespacefactory" kind="namespace"><name>factory</name>
+    <member refid="factory_8py_1a799b970f6aa8f0bd4409d69dcd2f8ef0" kind="function"><name>get_generator</name></member>
+  </compound>
+  <compound refid="namespacejs__generator" kind="namespace"><name>js_generator</name>
+    <member refid="js__generator_8py_1a094a6ee25464f7b9f7979217a4566492" kind="function"><name>find_js_source_dirs</name></member>
+    <member refid="js__generator_8py_1a0ba29707c3b2b5eff598802d3ebcf57a" kind="function"><name>create_jsdoc_config</name></member>
+  </compound>
+  <compound refid="namespacelanguage__detector" kind="namespace"><name>language_detector</name>
+    <member refid="language__detector_8py_1a53fc4c7c89c232f60d1968ae46dd9d00" kind="function"><name>detect_language</name></member>
+  </compound>
+  <compound refid="namespacepython__generator" kind="namespace"><name>python_generator</name>
+    <member refid="python__generator_8py_1aaa826aac5375447d4c00e068a09cccf9" kind="function"><name>remove_readonly</name></member>
+    <member refid="python__generator_8py_1a433ced078c6f5a5aa7161f585dbfa599" kind="function"><name>add_init_files</name></member>
+    <member refid="python__generator_8py_1ac423243807b2dfdf938c730935754c2a" kind="function"><name>find_main_package</name></member>
+  </compound>
+  <compound refid="base_8py" kind="file"><name>base.py</name>
+  </compound>
+  <compound refid="cpp__generator_8py" kind="file"><name>cpp_generator.py</name>
+  </compound>
+  <compound refid="factory_8py" kind="file"><name>factory.py</name>
+  </compound>
+  <compound refid="js__generator_8py" kind="file"><name>js_generator.py</name>
+  </compound>
+  <compound refid="language__detector_8py" kind="file"><name>language_detector.py</name>
+  </compound>
+  <compound refid="python__generator_8py" kind="file"><name>python_generator.py</name>
+  </compound>
+  <compound refid="dir_0188a3e6da905bc60aceb35bf790b8c9" kind="dir"><name>api</name>
+  </compound>
+  <compound refid="dir_1339385b109a16bf1947babb02c963e0" kind="dir"><name>api/doc_generators</name>
+  </compound>
+</doxygenindex>

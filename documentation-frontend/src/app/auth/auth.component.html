@@ -1,0 +1,10 @@
+<form (ngSubmit)="submit()">
+    <input [(ngModel)]="username" name="username" placeholder="Имя пользователя" required>
+    <input *ngIf="!isLogin" [(ngModel)]="email" name="email" placeholder="Email" required>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Пароль" required>
+    <button type="submit">{{ isLogin ? 'Войти' : 'Зарегистрироваться' }}</button>
+  </form>
+  <button (click)="isLogin = !isLogin">
+    {{ isLogin ? 'Нет аккаунта? Зарегистрироваться' : 'Уже есть аккаунт? Войти' }}
+  </button>
+  <div *ngIf="message">{{ message }}</div>
